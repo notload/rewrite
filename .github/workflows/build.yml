@@ -21,6 +21,10 @@ jobs:
       
       - name: Build APK
         run: |
+          # 修复 Android SDK 路径（GitHub Actions 镜像把 cmdline-tools 放在了不同位置）
+          if [ -d "/usr/local/lib/android/sdk/cmdline-tools/latest" ] && [ ! -d "/usr/local/lib/android/sdk/tools" ]; then
+            sudo ln -s /usr/local/lib/android/sdk/cmdline-tools/latest /usr/local/lib/android/sdk/tools
+          fi
           buildozer -v android debug
       
       - name: Upload APK
