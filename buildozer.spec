@@ -12,12 +12,17 @@ requirements = python3,kivy,openpyxl,requests
 
 orientation = portrait
 
-osx.python_version = 3
-osx.kivy_version = 2.1.0
-
-# 安卓权限
-android.permissions = INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
-android.api = 31
+# 使用 GitHub Actions 预装的 SDK
+android.sdk_path = /usr/local/lib/android/sdk
+android.ndk_path = /usr/local/lib/android/sdk/ndk/27.3.13750724
+android.api = 30
 android.minapi = 21
-android.sdk_path = ~/Android/Sdk   # 如果自动下载失败，可手动指定
-android.ndk_path = ~/Android/android-ndk-r25c
+android.accept_sdk_license = True
+android.skip_update = True
+
+# 权限
+android.permissions = INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
+
+[buildozer]
+log_level = 2
+warn_on_root = 1
