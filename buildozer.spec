@@ -8,7 +8,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 1.0
 
-requirements = python3,kivy,pandas,openpyxl,requests,numpy,plyer
+requirements = python3,kivy,openpyxl,requests
 
 orientation = portrait
 
