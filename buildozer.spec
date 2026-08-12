@@ -20,6 +20,9 @@ android.minapi = 21
 android.accept_sdk_license = True
 android.skip_update = True
 
+# 明确指定 bootstrap（默认 sdl2）
+bootstrap = sdl2
+
 # 权限（音频需要 Internet，存储需要读写）
 android.permissions = INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 
